@@ -4,15 +4,15 @@ let password = document.getElementById("password");
 let emailLog = document.getElementById('emailLog');
 let passwordLog = document.getElementById('passwordLog');
 let btnSignup = document.getElementById("btnSignup");
-let bigData;
+let UserData;
 let storage ="";
 let successMessage = document.getElementById('success');
 let errorMassege = document.getElementById("errorMassege");
 // Check Lockal Storage 
 if (localStorage.getItem("userData") == null) {
-  bigData = [];
+  UserData = [];
 } else {
-  bigData = JSON.parse(localStorage.getItem("userData"));
+  UserData = JSON.parse(localStorage.getItem("userData"));
 }
 
     
@@ -24,8 +24,8 @@ function data() {
       email: email.value,
       password: password.value,
     };
-    bigData.push(dataValue);
-    localStorage.setItem("userData", JSON.stringify(bigData));
+    UserData.push(dataValue);
+    localStorage.setItem("userData", JSON.stringify(UserData));
     successMessage.innerHTML= "success"
   }else{
     successMessage.innerHTML= "Sorry"; 
@@ -34,10 +34,10 @@ function data() {
 
 function dataValueLogin (){
   if(valid() ){
-    for (let i=0 ;i < bigData.length; i++){
-      if (emailLog.value == bigData[i].email && passwordLog.value == bigData[i].password){
+    for (let i=0 ;i < UserData.length; i++){
+      if (emailLog.value == UserData[i].email && passwordLog.value == UserData[i].password){
         window.location.href = "./home.html";
-        localStorage.setItem('userName' , JSON.stringify(bigData[i].userName));              
+        localStorage.setItem('userName' , JSON.stringify(UserData[i].userName));              
         return true;
       }else{
         errorMassege.innerHTML = "Incorrect username or password.";
