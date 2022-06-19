@@ -1,0 +1,27 @@
+body{
+    background-color: #24353f;
+    
+}
+.group{
+    box-shadow: 4px 10px 20px 2px rgba(0, 0, 0, 0.2), 4px 6px 20px 4px rgba(0, 0, 0, 0.19);    
+}
+h1{
+    
+    font-family: inherit;
+    font-weight: 500;
+}
+nav{
+    box-shadow: 4px 10px 20px 2px rgba(0, 0, 0, 0.2);
+}
+.home h2{
+    font-size: 1.25rem;
+}
+.home-message {
+    height: 70vh  !important;
+}
+.message {
+    box-shadow: 4px 10px 20px 2px rgba(0, 0, 0, 0.2), 4px 6px 20px 4px rgba(0, 0, 0, 0.19);    
+}
+.error-massege{
+    background-color: rgba(170, 18, 18, 0.613);
+}
